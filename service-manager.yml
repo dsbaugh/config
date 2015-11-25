@@ -7,16 +7,7 @@ eureka:
   client:
     instance-info-replication-interval-seconds: 5
 
-endpoints:
-  refresh:
-    enabled: true
-    
-spring:
-  rabbitmq:
-    host: rabbit
-    port: 5672
-    username: guest
-    password: guest
+
     
 serviceManager:
   loadSimulator:
