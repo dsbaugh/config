@@ -7,17 +7,6 @@ eureka:
     prefer-ip-address: true
   client:
     instance-info-replication-interval-seconds: 5
-    registerWithEureka: true
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
-      
-spring:
-  rabbitmq:
-    host: rabbit
-    port: 5672
-    username: guest
-    password: guest
     
 merchantLocator:
   redis:
