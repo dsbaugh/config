@@ -21,3 +21,5 @@ endpoints:
     enabled: true
   health:
     sensitive: false
+  refresh:
+    enabled: true
