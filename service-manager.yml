@@ -42,13 +42,6 @@ serviceManager:
       port: 8762
       hosts:
         - "24.28.180.212"
-    redisdb:
-      discovery-client: false
-      command: "/Users/timd/git/csrt-framework/bin/install_and_start_redis_shell_script"
-      verify-script: "/Users/timd/git/csrt-framework/bin/verify_redis_running_shell_script"
-      port: 6379
-      hosts:
-        - "24.28.180.212"
     rabbitmq:
       discovery-client: false
       command: "/Users/timd/git/csrt-framework/bin/install_and_start_rabbit_shell_script"
