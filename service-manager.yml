@@ -6,10 +6,6 @@ eureka:
     lease-renewal-interval-in-seconds: 5
   client:
     instance-info-replication-interval-seconds: 5
-    
-serviceManager:
-  loadSimulator:
-    sleepInterval: 700
 
 serviceManager:
   docker-image-prefix: tndavidson
