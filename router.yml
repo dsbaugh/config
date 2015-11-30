@@ -59,4 +59,10 @@ router:
           auto-start: false
           auto-scale: false
           traffic-ratio: 10
+    hello-world-jersey:
+      deployments:
+        hello-world-jersey:
+          auto-start: false
+          auto-scale: false
+          traffic-ratio: 1
  
