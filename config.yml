@@ -19,6 +19,10 @@ endpoints:
 eureka:
   instance:
     hostname: config
+  client:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
+    registerWithEureka: true
+    fetchRegistry: true
       
 spring:
   rabbitmq:
