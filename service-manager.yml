@@ -6,6 +6,8 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
     registerWithEureka: true
     fetchRegistry: true
+    service-url:
+      defaultZone: http:/192.168.1.7:8761/eureka
 
 serviceManager:
   docker-image-prefix: tndavidson
