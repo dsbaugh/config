@@ -21,6 +21,10 @@ eureka:
   instance:
     hostname: router
     prefer-ip-address: true
+  client:
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
+    registerWithEureka: true
+    fetchRegistry: true
     
 server:
   port: 8765
