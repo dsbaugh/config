@@ -36,9 +36,9 @@ serviceManager:
         - "24.28.180.212"
         - "192.168.1.7"
     ############## API Services: #############
-    merchant-locator:
+    hello-world-jersey:
       discovery-client: true
-      command: "/Users/timd/git/csrt-framework/bin/merchant-locator-1.0.jar"
+      command: "/Users/timd/git/csrt-framework/bin/hello-world-jersey-1.3.0.RELEASE.jar"
       port: 8080
       hosts:
         - "24.28.180.212"
