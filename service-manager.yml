@@ -47,7 +47,7 @@ serviceManager:
     hello-world-jersey:
       discovery-client: true
       command: "hello-world-jersey-1.3.0.RELEASE.jar"
-      port: 8080
+      port: 8081
       hosts:
         - "timothys-iMac.local"
         #- "ubuntu"
