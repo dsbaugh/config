@@ -24,10 +24,10 @@ serviceManager:
         #- "timothys-iMac.local"
         #- "ubuntu"
         #- "127.0.1.1"
-        - "ip-172-31-30-255.us-west-2.compute.internal"
-        - "ip-172-31-30-254.us-west-2.compute.internal"
-        - "ip-172-31-30-253.us-west-2.compute.internal"
         - "ip-172-31-7-158.us-west-2.compute.internal"
+        #- "ip-172-31-30-255.us-west-2.compute.internal"
+        #- "ip-172-31-30-254.us-west-2.compute.internal"
+        #- "ip-172-31-30-253.us-west-2.compute.internal"
     discovery:
       discovery-client: true
       command: "discovery-0.2.1-SNAPSHOT.jar"
@@ -36,10 +36,10 @@ serviceManager:
         #- "timothys-iMac.local"
         #- "ubuntu"
         #- "127.0.1.1"
-        - "ip-172-31-30-255.us-west-2.compute.internal"
-        - "ip-172-31-30-254.us-west-2.compute.internal"
-        - "ip-172-31-30-253.us-west-2.compute.internal"
         - "ip-172-31-7-158.us-west-2.compute.internal"
+        #- "ip-172-31-30-255.us-west-2.compute.internal"
+        #- "ip-172-31-30-254.us-west-2.compute.internal"
+        - "ip-172-31-30-253.us-west-2.compute.internal"
     router:
       discovery-client: true
       command: "router-0.2.1-SNAPSHOT.jar"
@@ -48,10 +48,10 @@ serviceManager:
         #- "timothys-iMac.local"
         #- "ubuntu"
         #- "127.0.1.1"
-        - "ip-172-31-30-255.us-west-2.compute.internal"
-        - "ip-172-31-30-254.us-west-2.compute.internal"
-        - "ip-172-31-30-253.us-west-2.compute.internal"
         - "ip-172-31-7-158.us-west-2.compute.internal"
+        #- "ip-172-31-30-255.us-west-2.compute.internal"
+        #- "ip-172-31-30-254.us-west-2.compute.internal"
+        #- "ip-172-31-30-253.us-west-2.compute.internal"
     ############## API Services: #############
     hello-world-jersey:
       discovery-client: true
@@ -61,8 +61,9 @@ serviceManager:
         #- "timothys-iMac.local"
         #- "ubuntu"
         #- "127.0.1.1"
+        - "ip-172-31-7-158.us-west-2.compute.internal"
         - "ip-172-31-30-255.us-west-2.compute.internal"
         - "ip-172-31-30-254.us-west-2.compute.internal"
         - "ip-172-31-30-253.us-west-2.compute.internal"
-        - "ip-172-31-7-158.us-west-2.compute.internal"
+
    
