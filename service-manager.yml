@@ -70,4 +70,4 @@ serviceManager:
         #- "ip-172-31-30-253.us-west-2.compute.internal"
         - "sbradley-dell"
 
-   
+   foo
