@@ -1,12 +1,3 @@
-
-
-spring:
-  rabbitmq:
-    host: rabbit
-    port: 5672
-    username: guest
-    password: guest
-    
 endpoints:
   restart:
     enabled: true

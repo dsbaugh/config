@@ -1,29 +1,11 @@
-
 info:
   component: Zuul Server
 
-zuul:
-  routes:
-    uname: 
-      path: /uname/**
-      strip-prefix: true  
-    merchant-locator:
-      path: /merchant-locator/**
-      strip-prefix: true
-    service-manager:
-      path: /service-manager/**
-      strip-prefix: true
-    foo:
-      path: /foo/**
-      strip-prefix: true
-  
 eureka:
   instance:
-    hostname: router
     prefer-ip-address: true
   client:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
-    registerWithEureka: true
     fetchRegistry: true
     
 server:
@@ -33,36 +15,4 @@ logging:
   level:
     ROOT: INFO
     org.springframework.web: DEBUG
-
-spring:
-  rabbitmq:
-    host: rabbit
-    port: 5672
-    username: guest
-    password: guest
      
-router:
-  auto-scale:
-    scale-down-threshold: 300
-    scale-up-threshold: 600
-  services:
-    merchant-locator:
-      deployments:
-        merchant-locator-v1_0:
-          auto-scale: false
-          auto-start: true
-          min-instances: 1
-          traffic-ratio: 1
-    service-manager:
-      deployments:
-        service-manager:
-          auto-start: false
-          auto-scale: false
-          traffic-ratio: 10
-    hello-world-jersey:
-      deployments:
-        hello-world-jersey:
-          auto-start: false
-          auto-scale: false
-          traffic-ratio: 1
- 
