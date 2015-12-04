@@ -19,16 +19,16 @@ serviceManager:
       command: "/home/dustin/git/csrt-framework/bin/jars/config-0.2.1-SNAPSHOT.jar" 
       port: 8768 
       hosts: 
-        - "hostname"
+        - "dustin-Inspiron-M5110"
     discovery: 
       discovery-client: true 
       command: "/home/dustin/git/csrt-framework/bin/jars/discovery-0.2.1-SNAPSHOT.jar" 
       port: 8761 
       hosts: 
-        - "hostname"
+        - "dustin-Inspiron-M5110"
     router: 
       discovery-client: true 
       command: "/home/dustin/git/csrt-framework/bin/jars/router-0.2.1-SNAPSHOT.jar" 
       port: 8765 
       hosts: 
-        - "hostname"
+        - "dustin-Inspiron-M5110"
