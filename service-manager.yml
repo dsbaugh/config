@@ -10,6 +10,7 @@ eureka:
 serviceManager:
   docker-image-prefix: tndavidson
   load-simulator-sleep-interval: 700
+  jmxMonitorTimerInterval: 5000
   enable-docker: false
   enable-auto-bootstrap: true
   auto-bootstrap:
