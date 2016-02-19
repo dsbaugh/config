@@ -8,6 +8,11 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     fetchRegistry: true
 
+server:
+  port: 8765
+
 logging:
   level:
     ROOT: INFO
+    	com.amex.csrt.router.filters: ERROR
+    	org.springframework.cloud.netflix.zuul.filters.ProxyRouteLocator: ERROR
