@@ -6,36 +6,64 @@ eureka:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}} 
     registerWithEureka: true
     fetchRegistry: true
-
+    
+logging:
+  level:
+    com.amex.csrt.servicemanager.monitor.JmxMonitorSchedulerJvmImpl: ERROR
+    
 serviceManager:
   docker-image-prefix: tndavidson
   jmxMonitorTimerInterval: 5000
   load-simulator-sleep-interval: 700
   enable-docker: false
   enable-auto-bootstrap: true
-  auto-bootstrap:
+  newServiceRegistrationTimeout: 300000
+  redisHost: localhost
+  redisPort: 6379
+  tempJarDirectory: "/tmp/jars"
+  serviceConfig:
     ############## CSRT Core Processes: #############
     discovery: 
       discovery-client: true 
-      command: "/home/dustin/git/csrt-framework/bin/jars/discovery-0.4.1-SNAPSHOT.jar" 
-      port: 8761 
-      hosts: 
+      version: "0.4.1-SNAPSHOT" 
+      ports: 
+        - "8761" 
+      bootstrapHosts: 
         - "dustin-VirtualBox"
     router: 
       discovery-client: true 
-      command: "/home/dustin/git/csrt-framework/bin/jars/router-0.4.1-SNAPSHOT.jar" 
-      port: 8765 
-      hosts: 
+      version: "0.4.1-SNAPSHOT" 
+      ports: 
+        - "8765" 
+      bootstrapHosts: 
         - "dustin-VirtualBox"
     query-service: 
       discovery-client: true 
-      command: "/home/dustin/git/csrt-framework/bin/jars/query-service-0.4.1-SNAPSHOT.jar" 
-      port: 8762 
-      hosts: 
+      version: "0.4.1-SNAPSHOT" 
+      ports: 
+        - "8762" 
+      bootstrapHosts: 
         - "dustin-VirtualBox"
     redis-query-service: 
       discovery-client: true 
-      command: "/home/dustin/git/csrt-framework/bin/jars/redis-query-service-0.4.1-SNAPSHOT.jar" 
-      port: 8763 
-      hosts: 
+      version: "0.4.1-SNAPSHOT" 
+      ports: 
+        - "8763" 
+      bootstrapHosts: 
         - "dustin-VirtualBox"
+    merchant-locator:
+      discovery-client: true
+      auto-scale: false
+      scaleUpResponseTimeThreshold: 6
+      scaleDownResponseTimeThreshold: 5
+      maxInstances: 3
+      minInstances: 1
+      stableMaxIterations: 3
+      unstableMaxIterations: 6
+      version: "0.4.1-SNAPSHOT" 
+      ports: 
+        - "9000"
+      bootstrapHosts:
+        - "dustin-VirtualBox"
+
+        

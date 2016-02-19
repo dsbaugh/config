@@ -7,3 +7,27 @@ endpoints:
     sensitive: false
   refresh:
     enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 30
+  client: 
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+  server: 
+    response-cache-update-interval-ms: 5000
+
+ribbon: 
+  serverListRefreshInterval: 1000
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 4369
+
+logging:
+  level:
+    root: WARN
+    com.amex: DEBUG
