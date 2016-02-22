@@ -25,7 +25,7 @@ ribbon:
 spring:
   rabbitmq:
     host: localhost
-    port: 4369
+    port: 5672
 
 logging:
   level:
