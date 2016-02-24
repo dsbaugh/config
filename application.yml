@@ -26,7 +26,13 @@ spring:
   rabbitmq:
     host: localhost
     port: 5672
-
+    
+eventBus:
+  broker: redis
+  redisHost: localhost #replace IP address here
+  redisPort: 6379
+  redisTopic: csrt-event-bus
+  
 logging:
   level:
     root: WARN
