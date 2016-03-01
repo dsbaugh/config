@@ -23,7 +23,7 @@ eureka:
 eventBus:
   broker: redis
   redisHost: localhost
-  redisPort: 6380
+  redisPort: 6381
   redisTopic: csrt-event-bus
 
 ribbon: 
