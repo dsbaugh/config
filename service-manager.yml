@@ -32,7 +32,7 @@ serviceManager:
       bootstrapHosts: 
         - "dustin-VirtualBox"
     router: 
-       sslEnabled: false
+      sslEnabled: false
       discovery-client: true 
       version: "0.4.5-SNAPSHOT" 
       ports: 
