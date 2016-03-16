@@ -24,45 +24,73 @@ serviceManager:
   serviceConfig:
     ############## CSRT Core Processes: #############
     discovery: 
+      sslEnabled: false
       discovery-client: true 
-      version: "0.4.1-SNAPSHOT" 
+      version: "0.4.5-SNAPSHOT" 
       ports: 
         - "8761" 
       bootstrapHosts: 
         - "dustin-VirtualBox"
     router: 
+       sslEnabled: false
       discovery-client: true 
-      version: "0.4.1-SNAPSHOT" 
+      version: "0.4.5-SNAPSHOT" 
       ports: 
         - "8765" 
       bootstrapHosts: 
         - "dustin-VirtualBox"
     query-service: 
+      sslEnabled: false
       discovery-client: true 
-      version: "0.4.1-SNAPSHOT" 
+      version: "0.4.5-SNAPSHOT" 
       ports: 
         - "8762" 
       bootstrapHosts: 
         - "dustin-VirtualBox"
-    redis-query-service: 
+    redis-query-service:
+      sslEnabled: false 
       discovery-client: true 
-      version: "0.4.1-SNAPSHOT" 
+      version: "0.4.5-SNAPSHOT" 
       ports: 
         - "8763" 
       bootstrapHosts: 
         - "dustin-VirtualBox"
+    self-test:
+      sslEnabled: false
+      discoveryClient: true
+      version: "0.4.5-SNAPSHOT"
+      autoScale: 
+        enabled: true
+        highResponseTimeThresholdMillis: 200
+        lowResponseTimeThresholdMillis: 5
+        highMemoryThresholdPercentage: 75
+        highCpuLoadThresholdPercentage: 60
+        lowCpuThresholdPercentage: 5
+        maxInstances: 3
+        minInstances: 1
+        stableMaxIterations: 12
+        unstableMaxIterations: 12
+      ports:
+        - "9090-9095"
+      bootstrapHosts: 
+        - "dustin-VirtualBox"
     merchant-locator:
+      sslEnabled: false
       discovery-client: true
-      auto-scale: false
-      scaleUpResponseTimeThreshold: 6
-      scaleDownResponseTimeThreshold: 5
-      maxInstances: 3
-      minInstances: 1
-      stableMaxIterations: 3
-      unstableMaxIterations: 6
-      version: "0.4.1-SNAPSHOT" 
+      auto-scale: 
+        enabled: true
+        highResponseTimeThresholdMillis: 200
+        lowResponseTimeThresholdMillis: 5
+        highMemoryThresholdPercentage: 85
+        highCpuLoadThresholdPercentage: 60
+        lowCpuThresholdPercentage: 5
+        maxInstances: 3
+        minInstances: 1
+        stableMaxIterations: 12
+        unstableMaxIterations: 12
+      version: "0.4.5-SNAPSHOT" 
       ports: 
-        - "9000"
+        - "9000-9003"
       bootstrapHosts:
         - "dustin-VirtualBox"
 
