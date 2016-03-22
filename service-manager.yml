@@ -30,7 +30,7 @@ serviceManager:
       ports: 
         - "8761" 
       bootstrapHosts: 
-        - "dustin-VirtualBox"
+        - "dustin-Inspiron-5721"
     router: 
       sslEnabled: false
       discovery-client: true 
@@ -38,7 +38,7 @@ serviceManager:
       ports: 
         - "8765" 
       bootstrapHosts: 
-        - "dustin-VirtualBox"
+        - "dustin-Inspiron-5721"
     query-service: 
       sslEnabled: false
       discovery-client: true 
@@ -46,7 +46,7 @@ serviceManager:
       ports: 
         - "8762" 
       bootstrapHosts: 
-        - "dustin-VirtualBox"
+        - "dustin-Inspiron-5721"
     redis-query-service:
       sslEnabled: false 
       discovery-client: true 
@@ -54,7 +54,7 @@ serviceManager:
       ports: 
         - "8763" 
       bootstrapHosts: 
-        - "dustin-VirtualBox"
+        - "dustin-Inspiron-5721"
     self-test:
       sslEnabled: false
       discoveryClient: true
@@ -73,7 +73,7 @@ serviceManager:
       ports:
         - "9090-9095"
       bootstrapHosts: 
-        - "dustin-VirtualBox"
+        - "dustin-Inspiron-5721"
     merchant-locator:
       sslEnabled: false
       discovery-client: true
@@ -92,6 +92,6 @@ serviceManager:
       ports: 
         - "9000-9003"
       bootstrapHosts:
-        - "dustin-VirtualBox"
+        - "dustin-Inspiron-5721"
 
         
