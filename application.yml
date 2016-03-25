@@ -7,3 +7,46 @@ endpoints:
     sensitive: false
   refresh:
     enabled: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 5
+  client: 
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    registryFetchIntervalSeconds: 5
+  server: 
+    response-cache-update-interval-ms: 5000
+
+eventBus:
+  broker: redis
+  redisHost: 192.168.99.100
+  redisPort: 6379
+  redisTopic: csrt-event-bus
+  #broker: jms
+  
+# JMS specific properties
+#spring:
+  #activemq: 
+    # To configure activeMQ with client failover:
+    # failover:(tcp://primary_ip:61616,tcp://secondary_ip:61616)?randomize=false
+    # (randomize=false ensures that the client does not load balance between the instances
+    #broker-url: failover:(tcp://localhost:9099,tcp://192.168.99.100:61617)?randomize=false
+    #user: admin
+    #password: secret
+
+ribbon: 
+  serverListRefreshInterval: 1000
+
+# AMQP specific properties
+#spring:
+#  rabbitmq:
+#    host: 192.168.99.100
+#    port: 9001
+
+logging:
+  level:
+    root: WARN
+    com.amex: DEBUG
