@@ -41,10 +41,10 @@ ribbon:
   serverListRefreshInterval: 1000
 
 # AMQP specific properties
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5671
+#spring:
+#  rabbitmq:
+#    host: localhost
+#    port: 5671
 
 logging:
   level:
