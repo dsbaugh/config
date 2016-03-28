@@ -22,8 +22,8 @@ eureka:
 
 eventBus:
   broker: redis
-  redisHost: 192.168.99.100
-  redisPort: 6379
+  redisHost: localhost
+  redisPort: 6380
   redisTopic: csrt-event-bus
   #broker: jms
   
