@@ -17,7 +17,7 @@ serviceManager:
   enable-auto-bootstrap: true
   newServiceRegistrationTimeout: 300000
   redisHost: localhost
-  redisPort: 6380
+  redisPort: 6379
   tempJarDirectory: "/tmp/jars"
   serviceConfig:
     ############## CSRT Core Processes: #############

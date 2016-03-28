@@ -21,21 +21,21 @@ eureka:
     response-cache-update-interval-ms: 5000
 
 eventBus:
-  broker: redis
-  redisHost: localhost
-  redisPort: 6380
-  redisTopic: csrt-event-bus
-  #broker: jms
+  #broker: redis
+  #redisHost: localhost
+  #redisPort: 6379
+  #redisTopic: csrt-event-bus
+  broker: jms
   
 # JMS specific properties
-#spring:
-  #activemq: 
+spring:
+  activemq: 
     # To configure activeMQ with client failover:
     # failover:(tcp://primary_ip:61616,tcp://secondary_ip:61616)?randomize=false
     # (randomize=false ensures that the client does not load balance between the instances
-    #broker-url: failover:(tcp://localhost:9099,tcp://192.168.99.100:61617)?randomize=false
-    #user: admin
-    #password: secret
+    broker-url: failover:(tcp://localhost:9099,tcp://localhost:61617)?randomize=false
+    user: admin
+    password: secret
 
 ribbon: 
   serverListRefreshInterval: 1000
