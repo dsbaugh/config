@@ -8,8 +8,15 @@ eureka:
     fetchRegistry: true
     
 serviceManager:
-  #jmsBroker:
-  #  bootstrapHosts: "timothys-iMac.local"
+  jmsBroker:
+    bootstrapHosts: "dustin-VirtualBox"
+    port: 9098
+  blobstore:
+    type: redis
+    #type: filesystem
+    hosts:
+      - "localhost"
+    port: 6379
   docker-image-prefix: tndavidson
   jmxMonitorTimerInterval: 5000
   load-simulator-sleep-interval: 700

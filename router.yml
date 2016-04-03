@@ -19,11 +19,11 @@ logging:
 router:
   redisHost: localhost
   redisPort: 6379
-  services:
-    merchant-locator:
-      deployments:
-        merchant-locator:
-          traffic-ratio: 1
+  #services:
+    #merchant-locator:
+    #  deployments:
+    #    merchant-locator:
+    #      traffic-ratio: 1
           
 spring.thymeleaf.cache: false
 zuul.RibbonRoutingFilter.route.disable: true
