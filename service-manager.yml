@@ -28,7 +28,7 @@ serviceManager:
       ports: 
         - "8761" 
       bootstrapHosts: 
-        - "dustin-Inspiron-5721"
+        - "dustin-VirtualBox"
     router: 
       sslEnabled: false
       discovery-client: true 
@@ -36,7 +36,7 @@ serviceManager:
       ports: 
         - "8765" 
       bootstrapHosts: 
-        - "dustin-Inspiron-5721"
+        - "dustin-VirtualBox"
     query-service: 
       sslEnabled: false
       discovery-client: true 
@@ -44,7 +44,7 @@ serviceManager:
       ports: 
         - "8762" 
       bootstrapHosts: 
-        - "dustin-Inspiron-5721"
+        - "dustin-VirtualBox"
     self-test:
       sslEnabled: false
       discoveryClient: true
@@ -63,7 +63,7 @@ serviceManager:
       ports:
         - "9090-9095"
       bootstrapHosts:
-        - "dustin-Inspiron-5721"
+        - "dustin-VirtualBox"
     hello-world:
       sslEnabled: false
       auto-scale: 
@@ -81,4 +81,4 @@ serviceManager:
       ports: 
         - "9000-9003"
       bootstrapHosts:
-        - "dustin-Inspiron-5721"
+        - "dustin-VirtualBox"
